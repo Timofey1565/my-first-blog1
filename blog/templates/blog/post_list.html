@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My blog</title>
+</head>
+<body>
+	<header class="title">
+		<h1 class="titleText">
+			My blog on django
+		</h1>
+	</header>
+	<section class="posts">
+		{% for post in posts %}
+		    <div class="post">
+		        <h2 class="postTitle">{{ post.title }}</h2>
+		        <p class="postText">{{ post.text|linebreaksbr }}</p>
+		        <p class="postDate">опубликовано: {{ post.published_date }}</p>
+		    </div>
+		{% endfor %}
+	</section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
