@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-	<title>My blog</title>
+	<title>Home</title>
 	<style>
 		h1, h2, h3, h4, a, p {
 			margin: 0;
@@ -21,12 +21,13 @@
 			background: -ms-linear-gradient(-45deg, #0f0f0f 0%, #2e2e2e 100%);
 			background: linear-gradient(135deg, #0f0f0f 0%, #2e2e2e 100%);
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f0f0f', endColorstr='#2e2e2e', GradientType=1 );
+			height: 100vh;
 		}
 
-		.titleText {
-			padding-top: 35px;
-			padding-left: 85px;
-			padding-bottom: 25px;
+		.tl {
+			margin-top: 50px;
+			font-size: 45px;
+			margin-left: 200px;
 		}
 
 		.li {
@@ -36,32 +37,16 @@
 			margin-right: 40px;
 		}
 
-		.lt {
-			height: 1px;
-			background: white;
-			margin-left: 300px;
-			margin-right: 300px;
+		.titleText {
+			padding-top: 35px;
+			padding-left: 85px;
+			padding-bottom: 25px;
 		}
 
-		.post {
-			margin-top: 100px;
-		}
-
-		.postTitle {
-			font-size: 32px;
-			margin-bottom: 20px;
-			text-align: center;
-		}
-
-		.postText {
+		.txt {
+			margin-top: 180px;
 			font-size: 25px;
-			margin-left: 350px;
-			margin-bottom: 10px;
-		}
-
-		.postDate {
-			margin-left: 370px;
-			margin-bottom: 32px;
+			text-align: center;
 		}
 
 		.v {
@@ -75,30 +60,19 @@
 	<div class="obj">
 		<header>
 			<h1 class="titleText">
-				My blog on Django <a href="http://timofey156595.pythonanywhere.com/" class="titleText v">home</a><a href="http://timofey156595.pythonanywhere.com/admin/" class="titleText v">admin</a>
+				My site on Django <a href="http://timofey156595.pythonanywhere.com/post_list/" class="titleText v">blog</a><a href="http://timofey156595.pythonanywhere.com/admin/" class="titleText v">admin</a>
 			</h1>
 		</header>
 		<div class="li"></div>
-			{% for post in posts %}
-			    <div class="post">
-			        <h3 class="postTitle">{{ post.title }}</h2>
-			        <p class="postText">{{ post.text|linebreaksbr }}</p>
-			        <p class="postDate">опубликовано: {{ post.published_date }}</p>
-			    </div>
-			    <div class="lt"></div>
-			{% endfor %}
+		<section>
+			<h2 class="tl">
+				Приветствую
+			</h2>
+				<p class="txt">
+					Это мой первый сайт сделаный на отличном фреймворке<br> для python - на Django.
+					Пока-что здесь присутствует только одно<br> WEB-приложение - блог, но скоро будут и другие. 
+				</p>
 		</section>
-		</div>
+	</div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
