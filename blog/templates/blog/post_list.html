@@ -1,91 +1,29 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="{% static 'css/blog.css' %}" type="text/css">
 	<title>My blog</title>
-	<style>
-		h1, h2, h3, h4, a, p {
-			margin: 0;
-			color: white;
-		}
-
-		.obj {
-			background: #0f0f0f;
-			background: -moz-linear-gradient(-45deg, #0f0f0f 0%, #2e2e2e 100%);
-			background: -webkit-gradient(left top, right bottom, color-stop(0%, #0f0f0f), color-stop(100%, #2e2e2e));
-			background: -webkit-linear-gradient(-45deg, #0f0f0f 0%, #2e2e2e 100%);
-			background: -o-linear-gradient(-45deg, #0f0f0f 0%, #2e2e2e 100%);
-			background: -ms-linear-gradient(-45deg, #0f0f0f 0%, #2e2e2e 100%);
-			background: linear-gradient(135deg, #0f0f0f 0%, #2e2e2e 100%);
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f0f0f', endColorstr='#2e2e2e', GradientType=1 );
-		}
-
-		.titleText {
-			padding-top: 35px;
-			padding-left: 85px;
-			padding-bottom: 25px;
-		}
-
-		.li {
-			height: 1px;
-			background: white;
-			margin-left: 40px;
-			margin-right: 40px;
-		}
-
-		.lt {
-			height: 1px;
-			background: white;
-			margin-left: 300px;
-			margin-right: 300px;
-		}
-
-		.post {
-			margin-top: 100px;
-		}
-
-		.postTitle {
-			font-size: 32px;
-			margin-bottom: 20px;
-			text-align: center;
-		}
-
-		.postText {
-			font-size: 25px;
-			margin-left: 350px;
-			margin-bottom: 10px;
-		}
-
-		.postDate {
-			margin-left: 370px;
-			margin-bottom: 32px;
-		}
-
-		.v {
-			padding-left: 200px;
-			font-size: 30px;
-		}
-
-	</style>
 </head>
 <body>
 	<div class="obj">
 		<header>
 			<h1 class="titleText">
-				My blog on Django <a href="http://timofey156595.pythonanywhere.com/" class="titleText v">home</a><a href="http://timofey156595.pythonanywhere.com/admin/" class="titleText v">admin</a>
+				My blog on Django <a href="http://127.0.0.1:8000" class="link">home</a><a href="http://127.0.0.1:8000/post_list/" class="link">blog</a><a href="http://127.0.0.1:8000/admin/" class="link">admin</a>
 			</h1>
 		</header>
-		<div class="li"></div>
+		<div class="line"></div>
 			{% for post in posts %}
 			    <div class="post">
 			        <h3 class="postTitle">{{ post.title }}</h2>
 			        <p class="postText">{{ post.text|linebreaksbr }}</p>
 			        <p class="postDate">опубликовано: {{ post.published_date }}</p>
 			    </div>
-			    <div class="lt"></div>
+			    <div class="minLine"></div>
 			{% endfor %}
 		</section>
 		</div>
